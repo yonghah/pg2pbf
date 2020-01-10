@@ -1,4 +1,5 @@
 #!/bin/bash
+DBPWD=$(</home/ec2-user/dbpwd.txt)
 for level in building floor room reference
 do
 	docker run -it \
