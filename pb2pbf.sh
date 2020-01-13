@@ -1,6 +1,6 @@
 #!/bin/bash
 echo_time() {
-    date +"%F-%R $*"
+    date +"%F %R $*"
 }
 
 for level in building floor room reference
