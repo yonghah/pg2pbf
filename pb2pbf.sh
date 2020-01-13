@@ -1,6 +1,6 @@
 #!/bin/bash
 echo_time() {
-    date +"%R $*"
+    date +"%F-%R $*"
 }
 
 for level in building floor room reference
@@ -22,3 +22,5 @@ tippecanoe \
 
 echo_time "uploading tiles to $S3BUCKET"
 aws s3 sync /home/ec2-user/data/geojson/tile s3://$S3BUCKET/tile
+
+echo_time "update finished."
